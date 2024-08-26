@@ -1,12 +1,13 @@
-"use client";
+'use client';
 
-import { useEffect, useState, ChangeEvent, FormEvent } from "react";
-import { Button } from "@repo/ui/button";
+import { Button } from '@repo/ui/button';
+import type { ChangeEvent, FormEvent } from 'react';
+import { useEffect, useState } from 'react';
 
-const API_HOST = process.env.NEXT_PUBLIC_API_HOST || "http://localhost:3001";
+const API_HOST = process.env.NEXT_PUBLIC_API_HOST || 'http://localhost:3001';
 
-export default function Web() {
-  const [name, setName] = useState<string>("");
+const Web = () => {
+  const [name, setName] = useState<string>('');
   const [response, setResponse] = useState<{ message: string } | null>(null);
   const [error, setError] = useState<string | undefined>();
 
@@ -27,12 +28,12 @@ export default function Web() {
       setResponse(response);
     } catch (err) {
       console.error(err);
-      setError("Unable to fetch response");
+      setError('Unable to fetch response');
     }
   };
 
   const onReset = () => {
-    setName("");
+    setName('');
   };
 
   return (
@@ -59,9 +60,12 @@ export default function Web() {
         <div>
           <h3>Greeting</h3>
           <p>{response.message}</p>
+          {/* eslint-disable-next-line react/jsx-no-bind */}
           <Button onClick={onReset}>Reset</Button>
         </div>
       )}
     </div>
   );
-}
+};
+
+export default Web;
