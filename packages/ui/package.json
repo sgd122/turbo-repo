@@ -8,11 +8,7 @@
     "lint": "eslint '**/*.{js,jsx,ts,tsx}' --fix",
     "test:unit": "jest",
     "test:watch": "jest --watch",
-    "test:watchAll": "jest --watchAll",
-    "test:coverage": "yarn test:unit --coverage"
-  },
-  "jest": {
-    "preset": "@repo/jest-presets/node"
+    "test:watchAll": "jest --watchAll"
   },
   "devDependencies": {
     "@testing-library/react": "^16.0.0",
@@ -22,6 +18,8 @@
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
     "@repo/jest-presets": "*",
+    "jest-environment-jsdom": "29.7.0",
+    "jest-plugin-context": "2.9.0",
     "eslint-plugin-jsx-a11y": "^6.9.0",
     "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-testing-library": "^6.3.0",

@@ -2,7 +2,12 @@
   "$schema": "https://turbo.build/schema.json",
   "tasks": {
     "build": {
-      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        "!**/*.stories.{tsx,mdx}",
+        "!**/*.test.{tsx,ts}",
+        ".env*"
+      ],
       "outputs": ["dist/**", ".next/**", "!.next/cache/**", "public/dist/**"],
       "dependsOn": ["^build"],
       "env": ["NEXT_PUBLIC_API_HOST"]
@@ -13,6 +18,13 @@
     },
     "lint": {
       "dependsOn": ["^build"]
+    },
+    "test:coverage": {
+      "outputs": ["coverage/**"],
+      "dependsOn": [],
+      "inputs": [
+        "**/*.test.{tsx,ts}"
+      ]
     },
     "dev": {
       "cache": false,

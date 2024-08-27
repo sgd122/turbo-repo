@@ -11,8 +11,7 @@
     "test": "jest --detectOpenHandles",
     "test:unit": "jest",
     "test:watch": "jest --watch",
-    "test:watchAll": "jest --watchAll",
-    "test:coverage": "yarn test:unit --coverage"
+    "test:watchAll": "jest --watchAll"
   },
   "jest": {
     "preset": "@repo/jest-presets/node"
