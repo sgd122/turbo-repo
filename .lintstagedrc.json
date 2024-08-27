@@ -1,0 +1,11 @@
+{
+  "packages/ui/**/*.{js,jsx,ts,tsx}": [
+    "yarn workspace @repo/ui lint --cache"
+  ],
+  "apps/web/**/*.{js,jsx,ts,tsx}": [
+    "yarn workspace web lint --cache"
+  ],
+  "apps/app/**/*.{js,jsx,ts,tsx}": [
+    "yarn workspace app lint --cache"
+  ]
+}

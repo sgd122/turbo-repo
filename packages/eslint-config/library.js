@@ -16,6 +16,8 @@ module.exports = {
     "prettier",
     require.resolve("@vercel/style-guide/eslint/next"),
     "turbo",
+    'plugin:jsx-a11y/recommended',
+    'plugin:react/jsx-runtime',
     "plugin:@tanstack/eslint-plugin-query/recommended",
     "plugin:prettier/recommended",
   ],
@@ -30,12 +32,21 @@ module.exports = {
     jest: true,
   },
   parser: "@typescript-eslint/parser",
-  plugins: ["import", "prettier"],
+  plugins: [
+    "react",
+    "@typescript-eslint",
+    "@tanstack/query",
+    "prettier",
+    "import",
+  ],
   settings: {
     "import/resolver": {
       typescript: {
         project,
       },
+    },
+    react: {
+      version: "detect",
     },
   },
   parserOptions: {
@@ -51,6 +62,9 @@ module.exports = {
     ".pnp.cjs",
     ".pnp.loader.cjs",
     "public/",
+    ".yarn/",
+    "dist/",
+    "coverage/",
   ],
   overrides: [
     {
@@ -59,6 +73,21 @@ module.exports = {
         "react-hooks/rules-of-hooks": "off",
       },
     },
+    {
+      files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+      extends: ['plugin:testing-library/react', 'plugin:jest/recommended'],
+      rules: {
+        'react-hooks/rules-of-hooks': 'off',
+        '@typescript-eslint/no-explicit-any': 'off',
+      },
+      settings: {
+        jest: {
+          globalAliases: {
+            describe: ['context'],
+          },
+        },
+      },
+    }
   ],
   rules: {
     // 코드 품질 향상
@@ -72,7 +101,6 @@ module.exports = {
     // React 관련 규칙
     "react/jsx-boolean-value": ["error", "always"], // boolean props 명시적 설정
     // TypeScript 관련 규칙
-    "@typescript-eslint/explicit-module-boundary-types": "warn", // 함수 반환 타입 명시
     "@typescript-eslint/no-unused-vars": ["error", { args: "none" }], // 사용되지 않는 변수 금지
     "@typescript-eslint/consistent-type-definitions": ["error", "interface"], // 인터페이스 사용 일관성
     // 코딩 스타일 일관성

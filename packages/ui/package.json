@@ -5,7 +5,11 @@
     "./button": "./src/button.tsx"
   },
   "scripts": {
-    "lint": "eslint \"**/*.ts*\" --max-warnings 0"
+    "lint": "eslint '**/*.{js,jsx,ts,tsx}' --fix",
+    "test:unit": "jest",
+    "test:watch": "jest --watch",
+    "test:watchAll": "jest --watchAll",
+    "test:coverage": "yarn test:unit --coverage"
   },
   "devDependencies": {
     "@types/react": "^18.2.61",

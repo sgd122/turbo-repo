@@ -6,9 +6,13 @@
     "build": "tsc",
     "clean": "rm -rf dist",
     "dev": "nodemon --exec \"node -r esbuild-register ./src/index.ts\" -e .ts",
-    "lint": "tsc --noEmit && eslint \"src/**/*.ts*\" --max-warnings 0",
+    "lint": "tsc --noEmit && eslint '**/*.{js,jsx,ts,tsx}' --fix",
     "start": "node -r esbuild-register ./src/index.ts",
-    "test": "jest --detectOpenHandles"
+    "test": "jest --detectOpenHandles",
+    "test:unit": "jest",
+    "test:watch": "jest --watch",
+    "test:watchAll": "jest --watchAll",
+    "test:coverage": "yarn test:unit --coverage"
   },
   "jest": {
     "preset": "@repo/jest-presets/node"
