@@ -7,6 +7,7 @@ module.exports = {
   modulePathIgnorePatterns: [
     "<rootDir>/test/__fixtures__",
     "<rootDir>/node_modules",
+    "<rootDir>/.next/",
     "<rootDir>/dist",
   ],
   preset: "ts-jest",

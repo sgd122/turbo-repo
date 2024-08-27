@@ -277,6 +277,13 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.22.5"
 
+"@babel/runtime@^7.12.5":
+  version "7.25.4"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.25.4.tgz#6ef37d678428306e7d75f054d5b1bdb8cf8aa8ee"
+  integrity sha512-DSgLeL/FNcpXuzav5wfYvHCGvynXkJbn3Zvc3823AEe9nPwW9IK4UoCSS5yGymmQzN0pCPvivtgS6/8U2kkm1w==
+  dependencies:
+    regenerator-runtime "^0.14.0"
+
 "@babel/runtime@^7.23.2":
   version "7.23.9"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.23.9.tgz#47791a15e4603bb5f905bc0753801cf21d6345f7"
@@ -1069,6 +1076,13 @@
     dom-accessibility-api "^0.6.3"
     lodash "^4.17.21"
     redent "^3.0.0"
+
+"@testing-library/react@^16.0.0":
+  version "16.0.0"
+  resolved "https://registry.yarnpkg.com/@testing-library/react/-/react-16.0.0.tgz#0a1e0c7a3de25841c3591b8cb7fb0cf0c0a27321"
+  integrity sha512-guuxUKRWQ+FgNX0h0NS0FIq3Q3uLtWVpBzcLOggmfMoUpgBnzBzvLLd4fbm6yS8ydJd94cIfY4yP9qUQjM2KwQ==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
 
 "@types/babel__core@^7.1.14":
   version "7.20.5"
@@ -3355,6 +3369,13 @@ eslint-plugin-testing-library@^6.0.1:
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-testing-library/-/eslint-plugin-testing-library-6.2.0.tgz#af3340b783c881eb19ec5ac6b3a4bfe8ab4a1f74"
   integrity sha512-+LCYJU81WF2yQ+Xu4A135CgK8IszcFcyMF4sWkbiu6Oj+Nel0TrkZq/HvDw0/1WuO3dhDQsZA/OpEMGd0NfcUw==
+  dependencies:
+    "@typescript-eslint/utils" "^5.58.0"
+
+eslint-plugin-testing-library@^6.3.0:
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-testing-library/-/eslint-plugin-testing-library-6.3.0.tgz#9c31a9941a860efdff3c06180151ab9c8142f685"
+  integrity sha512-GYcEErTt6EGwE0bPDY+4aehfEBpB2gDBFKohir8jlATSUvzStEyzCx8QWB/14xeKc/AwyXkzScSzMHnFojkWrA==
   dependencies:
     "@typescript-eslint/utils" "^5.58.0"
 

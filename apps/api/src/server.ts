@@ -1,5 +1,5 @@
-import { json, urlencoded } from "body-parser";
-import express, { type Express } from "express";
+import {json, urlencoded} from "body-parser";
+import express, {type Express} from "express";
 import morgan from "morgan";
 import cors from "cors";
 
@@ -20,3 +20,4 @@ export const createServer = (): Express => {
 
   return app;
 };
+
