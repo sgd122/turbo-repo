@@ -12,6 +12,9 @@
     "test:watchAll": "jest --watchAll",
     "test:coverage": "yarn test:unit --coverage"
   },
+  "jest": {
+    "preset": "@repo/jest-presets/node"
+  },
   "dependencies": {
     "@repo/ui": "*",
     "next": "^14.1.1",

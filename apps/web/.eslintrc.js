@@ -11,6 +11,6 @@ module.exports = {
   },
   ignorePatterns: [
     ".*.js",
-    "next.config.js",
+    "*.config.js",
   ]
 };

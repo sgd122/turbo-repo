@@ -11,6 +11,9 @@
     "test:watchAll": "jest --watchAll",
     "test:coverage": "yarn test:unit --coverage"
   },
+  "jest": {
+    "preset": "@repo/jest-presets/node"
+  },
   "devDependencies": {
     "@testing-library/react": "^16.0.0",
     "@types/react": "^18.2.61",

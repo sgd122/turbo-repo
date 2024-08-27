@@ -11,5 +11,6 @@ module.exports = {
   },
   ignorePatterns: [
     ".*.js",
+    "*.config.js",
   ]
 };
