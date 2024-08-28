@@ -21,6 +21,16 @@ services:
       - 3001:3001
     networks:
       - app_network
+  storybook:
+    container_name: storybook
+    build:
+      context: .
+      dockerfile: ./apps/storybook/Dockerfile
+    restart: always
+    ports:
+      - 6006:80
+    networks:
+      - app_network
 
 # Define a network, which allows containers to communicate
 # with each other, by using their container name as a hostname
