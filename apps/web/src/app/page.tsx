@@ -1,6 +1,6 @@
 'use client';
 
-import { Button } from '@repo/ui/button';
+import { Button } from '@repo/ui';
 import type { ChangeEvent, FormEvent } from 'react';
 import { useEffect, useState } from 'react';
 

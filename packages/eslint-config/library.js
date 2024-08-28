@@ -16,8 +16,8 @@ module.exports = {
     "prettier",
     require.resolve("@vercel/style-guide/eslint/next"),
     "turbo",
-    'plugin:jsx-a11y/recommended',
-    'plugin:react/jsx-runtime',
+    "plugin:jsx-a11y/recommended",
+    "plugin:react/jsx-runtime",
     "plugin:@tanstack/eslint-plugin-query/recommended",
     "plugin:prettier/recommended",
   ],
@@ -74,20 +74,20 @@ module.exports = {
       },
     },
     {
-      files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
-      extends: ['plugin:testing-library/react', 'plugin:jest/recommended'],
+      files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
+      extends: ["plugin:testing-library/react", "plugin:jest/recommended"],
       rules: {
-        'react-hooks/rules-of-hooks': 'off',
-        '@typescript-eslint/no-explicit-any': 'off',
+        "react-hooks/rules-of-hooks": "off",
+        "@typescript-eslint/no-explicit-any": "off",
       },
       settings: {
         jest: {
           globalAliases: {
-            describe: ['context'],
+            describe: ["context"],
           },
         },
       },
-    }
+    },
   ],
   rules: {
     // 코드 품질 향상
@@ -132,7 +132,7 @@ module.exports = {
     // 일관된 화살표 함수 괄호: 화살표 함수에 대해 일관적인 괄호 사용을 적용합니다.
     "arrow-parens": ["error", "always"],
     // import 경로가 잘못된 경우 경고를 활성화합니다.
-    "import/no-unresolved": ["error", { ignore: ["^@/"] }],
+    "import/no-unresolved": ["error", { ignore: ["^@/", "^@"] }],
     // import 순서 규칙
     "import/order": [
       "error",
