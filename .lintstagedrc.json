@@ -8,6 +8,9 @@
   "apps/app/**/*.{js,jsx,ts,tsx}": [
     "yarn workspace app lint --cache"
   ],
+  "apps/storybook/**/*.{js,jsx,ts,tsx}": [
+    "yarn workspace storybook lint --cache"
+  ],
   "*.{js,jsx,ts,tsx}": [
     "yarn test:coverage --findRelatedTests"
   ]
