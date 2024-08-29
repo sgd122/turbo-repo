@@ -1,7 +1,10 @@
+import type { Meta } from '@storybook/react';
 import { fn } from '@storybook/test';
+
+import type { HeaderProps } from './Header';
 import { Header } from './Header';
 
-export default {
+const meta: Meta<HeaderProps> = {
   title: 'Example/Header',
   component: Header,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
@@ -16,6 +19,9 @@ export default {
     onCreateAccount: fn(),
   },
 };
+
+export default meta;
+
 export const LoggedIn = {
   args: {
     user: {
