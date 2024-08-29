@@ -1,4 +1,5 @@
-import React from 'react';
+import type React from 'react';
+import { useState } from 'react';
 
 import { Header } from './Header';
 import './page.css';
@@ -8,7 +9,7 @@ interface User {
 }
 
 export const Page: React.FC = () => {
-  const [user, setUser] = React.useState<User | undefined>(undefined);
+  const [user, setUser] = useState<User | undefined>(undefined);
 
   return (
     <article>

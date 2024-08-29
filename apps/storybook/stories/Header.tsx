@@ -1,6 +1,7 @@
-import PropTypes from 'prop-types';
+import type React from 'react';
 
 import { Button } from './Button';
+
 import './header.css';
 
 export interface HeaderProps {
@@ -65,12 +66,3 @@ export const Header: React.FC<HeaderProps> = ({
     </div>
   </header>
 );
-
-Header.propTypes = {
-  user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-  }),
-  onLogin: PropTypes.func.isRequired,
-  onLogout: PropTypes.func.isRequired,
-  onCreateAccount: PropTypes.func.isRequired,
-};
