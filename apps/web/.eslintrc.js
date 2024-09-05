@@ -1,6 +1,6 @@
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
-  extends: ["@repo/eslint-config/next.js"],
+  extends: ['@repo/eslint-config/next.js'],
   settings: {
     'import/resolver': {
       alias: {
@@ -9,8 +9,5 @@ module.exports = {
       },
     },
   },
-  ignorePatterns: [
-    ".*.js",
-    "*.config.js",
-  ]
+  ignorePatterns: ['.*.js', '*.config.js'],
 };
