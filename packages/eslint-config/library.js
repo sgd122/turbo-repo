@@ -14,10 +14,6 @@ module.exports = {
     "plugin:import/warnings",
     "plugin:import/typescript",
     "prettier",
-    require.resolve("@vercel/style-guide/eslint/next"),
-    "turbo",
-    "plugin:jsx-a11y/recommended",
-    "plugin:react/jsx-runtime",
     "plugin:@tanstack/eslint-plugin-query/recommended",
     "plugin:prettier/recommended",
   ],
@@ -152,5 +148,6 @@ module.exports = {
         "newlines-between": "always",
       },
     ],
+    "react/prop-types": "off",
   },
 };

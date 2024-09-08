@@ -1,0 +1,1 @@
+export { useMainCharacterViewModel } from './useMainCharacterViewModel';
