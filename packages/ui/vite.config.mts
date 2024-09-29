@@ -1,12 +1,11 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import {resolve} from 'path';
+import { resolve } from 'path';
 
 import react from '@vitejs/plugin-react';
 import preserveDirectives from 'rollup-preserve-directives';
-import {defineConfig} from 'vite';
+import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 import svgr from 'vite-plugin-svgr';
-
 
 export default defineConfig({
   plugins: [
@@ -31,7 +30,8 @@ export default defineConfig({
       },
       formats: ['es', 'cjs'],
       name: '@repo/ui',
-      fileName: (format, entryName) => `${entryName}.${format === 'es' ? 'mjs' : 'js'}`,
+      fileName: (format, entryName) =>
+        `${entryName}.${format === 'es' ? 'mjs' : 'js'}`,
     },
     rollupOptions: {
       external: ['react', 'react-dom'],
@@ -54,7 +54,6 @@ export default defineConfig({
       },
       // @ts-ignore
       plugins: [preserveDirectives()],
-
     },
   },
   css: {
@@ -64,7 +63,7 @@ export default defineConfig({
     },
     preprocessorOptions: {
       scss: {
-        additionalData: '@import "./src/styles/main.scss";',
+        additionalData: '@import "./src/styles/index.scss";',
       },
     },
   },

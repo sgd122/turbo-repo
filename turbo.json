@@ -19,6 +19,11 @@
     "lint": {
       "dependsOn": ["^build"]
     },
+    "stylelint": {
+      "inputs": [
+        "**/*.{scss,css}"
+      ]
+    },
     "test:coverage": {
       "outputs": ["coverage/**"],
       "dependsOn": [],
@@ -31,6 +36,10 @@
       "persistent": true
     },
     "clean": {
+      "cache": false
+    },
+    "start": {
+      "dependsOn": ["build"],
       "cache": false
     }
   }

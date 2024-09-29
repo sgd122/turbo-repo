@@ -4,17 +4,26 @@
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "index.d.ts",
+  "files": [
+    "dist",
+    "src/styles",
+    "index.d.ts"
+  ],
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
       "require": "./dist/index.js",
       "types": "./index.d.ts"
-    }
+    },
+    "./style.css": "./dist/style.css",
+    "./styles": "./src/styles/index.scss",
+    "./styles/*": "./src/styles/*"
   },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "stylelint": "stylelint **/*.scss",
     "lint": "eslint '**/*.{js,jsx,ts,tsx}' --fix",
     "test:unit": "jest",
     "test:watch": "jest --watch",
@@ -42,6 +51,7 @@
     "jest-environment-jsdom": "29.7.0",
     "jest-plugin-context": "2.9.0",
     "rollup-preserve-directives": "1.1.1",
+    "sass": "^1.79.4",
     "storybook": "^8.2.9",
     "typescript": "^5.3.3",
     "vite": "^5.4.2",
@@ -50,5 +60,8 @@
   },
   "dependencies": {
     "react": "^18.2.0"
+  },
+  "peerDependencies": {
+    "sass": "^1.79.4"
   }
 }
